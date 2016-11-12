@@ -18,7 +18,8 @@
 		155F0C501DCA758700CAA83B /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155F0C4F1DCA758700CAA83B /* Movie.swift */; };
 		155F0C541DCA82EF00CAA83B /* Movies.json in Resources */ = {isa = PBXBuildFile; fileRef = 155F0C531DCA82EF00CAA83B /* Movies.json */; };
 		155F0C561DCA832500CAA83B /* DiskMovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155F0C551DCA832500CAA83B /* DiskMovieRepository.swift */; };
-		1564848D1DCBD85E00C6853A /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1564848C1DCBD85E00C6853A /* ImageDownloader.swift */; };
+		B7CE0F441DD722CF00DF0F8D /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CE0F431DD722CF00DF0F8D /* AppDependencies.swift */; };
+		B7CE0F461DD7292D00DF0F8D /* MovieRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CE0F451DD7292D00DF0F8D /* MovieRepositoryInterface.swift */; };
 		DC931631CB7F44226B86D725 /* Pods_MoviesiOSKata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011E3F33C2BB065A110A1CD7 /* Pods_MoviesiOSKata.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,8 +59,9 @@
 		155F0C4F1DCA758700CAA83B /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		155F0C531DCA82EF00CAA83B /* Movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Movies.json; sourceTree = "<group>"; };
 		155F0C551DCA832500CAA83B /* DiskMovieRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskMovieRepository.swift; sourceTree = "<group>"; };
-		1564848C1DCBD85E00C6853A /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		A168145F045711F6ACBEC826 /* Pods-MoviesiOSKata.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesiOSKata.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoviesiOSKata/Pods-MoviesiOSKata.release.xcconfig"; sourceTree = "<group>"; };
+		B7CE0F431DD722CF00DF0F8D /* AppDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
+		B7CE0F451DD7292D00DF0F8D /* MovieRepositoryInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieRepositoryInterface.swift; sourceTree = "<group>"; };
 		EE1B99D9648E92A48912CD23 /* Pods-MoviesiOSKata.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesiOSKata.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoviesiOSKata/Pods-MoviesiOSKata.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +133,8 @@
 				1510DE9C1DC9469C0039CD8F /* AppDelegate.swift */,
 				1510DEA31DC9469C0039CD8F /* Assets.xcassets */,
 				1510DEA81DC9469C0039CD8F /* Info.plist */,
+				B7CE0F431DD722CF00DF0F8D /* AppDependencies.swift */,
+				B7CE0F451DD7292D00DF0F8D /* MovieRepositoryInterface.swift */,
 			);
 			path = MoviesiOSKata;
 			sourceTree = "<group>";
@@ -167,7 +171,6 @@
 			children = (
 				151A031E1DC9C0AA00A72593 /* MoviesTableViewController.swift */,
 				1510DEA01DC9469C0039CD8F /* Main.storyboard */,
-				1564848C1DCBD85E00C6853A /* ImageDownloader.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -259,13 +262,16 @@
 				TargetAttributes = {
 					1510DE981DC9469C0039CD8F = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 					};
 					1510DEAC1DC9469C0039CD8F = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = 1510DE981DC9469C0039CD8F;
 					};
 					1510DEB71DC9469C0039CD8F = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = 1510DE981DC9469C0039CD8F;
 					};
 				};
@@ -372,10 +378,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7CE0F461DD7292D00DF0F8D /* MovieRepositoryInterface.swift in Sources */,
 				151A031F1DC9C0AA00A72593 /* MoviesTableViewController.swift in Sources */,
+				B7CE0F441DD722CF00DF0F8D /* AppDependencies.swift in Sources */,
 				1510DE9D1DC9469C0039CD8F /* AppDelegate.swift in Sources */,
 				155F0C501DCA758700CAA83B /* Movie.swift in Sources */,
-				1564848D1DCBD85E00C6853A /* ImageDownloader.swift in Sources */,
 				155F0C561DCA832500CAA83B /* DiskMovieRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,6 +524,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xurxodev.MoviesiOSKata;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -529,6 +537,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xurxodev.MoviesiOSKata;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -540,6 +549,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xurxodev.MoviesiOSKataTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoviesiOSKata.app/MoviesiOSKata";
 			};
 			name = Debug;
@@ -552,6 +562,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xurxodev.MoviesiOSKataTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoviesiOSKata.app/MoviesiOSKata";
 			};
 			name = Release;
@@ -563,6 +574,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xurxodev.MoviesiOSKataUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = MoviesiOSKata;
 			};
 			name = Debug;
@@ -574,6 +586,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xurxodev.MoviesiOSKataUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = MoviesiOSKata;
 			};
 			name = Release;
